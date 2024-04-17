@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Update Page</h1>
+<form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" value="Update" class="btn btn-outline-primary">
+    <a href="{% url 'homepage' %}" class="btn btn-outline-primary ">Back to Home</a>
+
+</form>
+{% endblock content %}
